@@ -1,0 +1,45 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../CSS/drumkit.css">
+  <body>
+
+    <div class="keys">
+      <div data-key='61' class= "key">
+        <kbd>a</kbd>
+      <div>
+    </div>
+
+    <div data-key='73' class="keys">
+      <div class= "key">
+        <kbd>s</kbd>
+      <div>
+    </div>
+
+    <div data-key='64'class="keys">
+      <div class= "key">
+        <kbd>d</kbd>
+    </div>
+    <div>
+
+    <div data-key='66'class="keys">
+      <div class= "key">
+        <kbd>f</kbd>
+      <div>
+    </div>
+
+    <audio data-key="65" src="/home/phaldox/Downloads/button.mp3"></audio>
+    <audio data-key="83" src="/home/phaldox/Downloads/twang.mp3"></audio>
+    <audio data-key="68" src="/home/phaldox/Downloads/broom.mp3"></audio>
+    <audio data-key="70" src="/home/phaldox/Downloads/marbles.mp3"></audio>
+      <script>
+        window.addEventListener('keydown', function(e) {
+          const audio = document.querySelector(`audio[data-key="${e.keyCode}" ]`)
+          if (audio) {
+            return audio.play()
+          }
+          return
+        })
+      </script>
+  </body>
+</head>
+</html>
